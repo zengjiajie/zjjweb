@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>奶牛猫</title>
+  <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet" media="all" type="text/css" />
+  <style>
+    .bar h3{
+      color: #fff;
+    }
+    .msg>div span{
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+	 
+  <div class="head">
+    <div class="logo"> <img src="images/logo.png" width="100" /></div>
+    <div class="clear"></div>
+    <div class="menu">
+      <ul class="center">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="mao.html">萌图</a></li>
+        <li><a href="liuyan.html">留言</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="liuyan">
+    <div class="content">
+      <div class="bar contain">
+        <h3>留言</h3>
+      </div>
+      <div class="contain">
+        <form action="index.html">
+          <div class="msg pad clearfix">
+            <div> <span class="fl">昵称：</span>
+              <input type="text" class="input" size="50" />
+            </div>
+            <div> <span class="fl">姓名：</span>
+              <input type="text" class="input" size="50" />
+            </div>
+            <!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+ 
+    #mgs {
+        width: 400px;
+        color: black;
+        font-style: italic;
+        border-width: 5px;
+        margin: 0 auto;
+    }
+ 
+    #text {
+        width: 360px;
+        height: 150px;
+        padding: 20px;
+        font-size: 20px;
+    }
+ 
+    li {
+        list-style: none;
+        border-bottom: 1px solid #999;
+        line-height: 20px;
+        margin-top: 30px;
+    }
+ 
+    #span {
+        float: right;
+    }
+    
+</style>
+ 
+<body>
+    <div id="mgs">
+        <textarea id="text"></textarea><br>
+        <input type="button" id="btn" value="提交">
+        <ul class="list"></ul>
+    </div >
+        <script>
+            var btn = document.getElementById('btn');
+            var list = document.querySelector('.list');
+            var text = document.getElementById('text');
+            btn.onclick = function () {
+                if (text.value == '') {
+                    alert('你没有输入内容。')
+                } else {
+                    var li = document.createElement('li');
+                     var time = new Date();
+                    var mytime = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate();
+                    li.innerHTML = text.value + '<span>' + mytime + '\t' + '<button>删除</button></span>';
+                    text.value = '';
+                    list.insertBefore(li, list.children[0]);
+                    var allB = document.querySelectorAll('button');
+                    for (var i = 0; i < allB.length; i++) {
+                        allB[i].onclick = function () {
+                            list.removeChild(this.parentNode.parentNode);
+                        }
+                    }
+ 
+                }
+            }
+        </script>
+</body>
+ 
+</html>
+
+            
+          </div>
+        </form>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <footer>
+    <div class="foot">
+      <p>奶牛猫 </p>
+    </div>
+  </footer>
+</body>
+<script src="./js/script.js"></script>
+</html>
